@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_home"
+          android:title="@string/home"
+          android:icon="@drawable/ic_home" />
+    <item android:id="@+id/menu_discovery"
+          android:title="@string/discovery"
+          android:icon="@drawable/ic_discovery" />
+    <item android:id="@+id/menu_attention"
+          android:title="@string/attention"
+          android:icon="@drawable/ic_attention" />
+    <item android:id="@+id/menu_profile"
+          android:title="@string/profile"
+          android:icon="@drawable/ic_profile" />
+    <item android:id="@+id/menu_shopping_cart"
+          android:title="@string/shopping_cart"
+          android:icon="@drawable/ic_shopping_cart" />
+</menu>

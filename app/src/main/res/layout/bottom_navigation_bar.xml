@@ -1,61 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <FrameLayout
-        android:id="@+id/home_container"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        >
-    </FrameLayout>
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation" />
 
-    <View android:layout_width="match_parent"
-          android:layout_height="0.5dp"
-          android:alpha="0.6"
-          android:background="@android:color/darker_gray"
-        />
-    <RadioGroup
-        android:id="@+id/radio_group_button"
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:background="@android:color/white"
-        >
-        <RadioButton
-            android:id="@+id/radio_button_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/home"
-            android:drawableTop="@drawable/tab_home_selector"
-            style="@style/RadioGroupButtonStyle"
-            />
-        <RadioButton
-            android:id="@+id/radio_button_discovery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/discovery"
-            android:drawableTop="@drawable/tab_discovery_selector"
-            style="@style/RadioGroupButtonStyle"
-            />
-        <RadioButton
-            android:id="@+id/radio_button_attention"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/attention"
-            android:drawableTop="@drawable/tab_attention_selector"
-            style="@style/RadioGroupButtonStyle"
-            />
-        <RadioButton
-            android:id="@+id/radio_button_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/profile"
-            android:drawableTop="@drawable/tab_profile_selector"
-            style="@style/RadioGroupButtonStyle"
-            />
-    </RadioGroup>
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/bottom_navigation_color_selector"
+        app:itemTextColor="@drawable/bottom_navigation_color_selector"
+        app:menu="@menu/navigation_items" />
+
+    <!--阴影-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_above="@id/navigation"
+        android:background="@drawable/shadow" />
+
+</RelativeLayout>
