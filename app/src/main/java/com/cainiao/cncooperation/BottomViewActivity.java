@@ -12,7 +12,10 @@ import com.cainiao.cncooperation.fragment.AttentionFragment;
 import com.cainiao.cncooperation.fragment.DiscoveryFragment;
 import com.cainiao.cncooperation.fragment.HomeFragment;
 import com.cainiao.cncooperation.fragment.ProfileFragment;
+<<<<<<< HEAD
 import com.cainiao.cncooperation.fragment.ShoppingCartFragment;
+=======
+>>>>>>> aa886f77a6f23efcb9945a91e781e3c106c34ebc
 import com.cainiao.cncooperation.util.BottomNavigationViewHelper;
 
 public class BottomViewActivity extends AppCompatActivity {
@@ -102,11 +105,11 @@ public class BottomViewActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         BottomViewPagerAdapter adapter = new BottomViewPagerAdapter(getSupportFragmentManager());
 
-        adapter.addFragment(HomeFragment.newInstance("主页"));
-        adapter.addFragment(DiscoveryFragment.newInstance("发现"));
-        adapter.addFragment(AttentionFragment.newInstance("关注"));
-        adapter.addFragment(ProfileFragment.newInstance("我的"));
-        adapter.addFragment(ShoppingCartFragment.newInstance("购物车"));
+        adapter.addFragment(new HomeFragment());
+        adapter.addFragment(new DiscoveryFragment());
+        adapter.addFragment(new AttentionFragment());
+        adapter.addFragment(new ProfileFragment());
+        adapter.addFragment(new ShoppingCartFragment());
         viewPager.setAdapter(adapter);
     }
 
