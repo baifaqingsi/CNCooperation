@@ -1,4 +1,4 @@
-package com.cainiao.cncooperation.fragment;
+package com.cainiao.cncooperation.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
